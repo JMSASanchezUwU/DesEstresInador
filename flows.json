@@ -1,0 +1,966 @@
+[
+    {
+        "id": "600565e67ff53872",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf6ce0da93682a9c",
+        "type": "mqtt in",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/temperatura/ambiente",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "363ccd2bc443744a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "711a8b6b5bbb6951",
+                "6e53a280219439ee",
+                "80e317f20e7dd4d8"
+            ]
+        ]
+    },
+    {
+        "id": "aabb5ccf36c071c0",
+        "type": "mqtt in",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/temperatura/cuerpo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "363ccd2bc443744a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "77cc06254b70671c",
+                "d3b5b3ad84939885",
+                "3b9eeb90215729dc"
+            ]
+        ]
+    },
+    {
+        "id": "f77784b1654a27e8",
+        "type": "mqtt in",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/frecuencia_cardiaca/frecuencia",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "363ccd2bc443744a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "59022d5d42a0f695",
+                "693a15434d2cbade",
+                "293c0758856f34bc"
+            ]
+        ]
+    },
+    {
+        "id": "7c24866f8645956c",
+        "type": "mqtt in",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/oxigeno/spo2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "363ccd2bc443744a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "a23218db4858d87f",
+                "603723bce4966af9",
+                "c97662e96baca115"
+            ]
+        ]
+    },
+    {
+        "id": "77cc06254b70671c",
+        "type": "ui_gauge",
+        "z": "600565e67ff53872",
+        "name": "",
+        "group": "cd92cf4fb56e215b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp Corporal",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "42",
+        "colors": [
+            "#07f2ee",
+            "#14c838",
+            "#ca3838"
+        ],
+        "seg1": "35",
+        "seg2": "38",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "59022d5d42a0f695",
+        "type": "ui_chart",
+        "z": "600565e67ff53872",
+        "name": "",
+        "group": "b833e06f96f0dc06",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Frecuencia Cardiaca",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "40",
+        "ymax": "250",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 460,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a23218db4858d87f",
+        "type": "ui_gauge",
+        "z": "600565e67ff53872",
+        "name": "",
+        "group": "0c3372b9dc2f45c3",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Nivel de Oxigenacion",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "711a8b6b5bbb6951",
+        "type": "ui_gauge",
+        "z": "600565e67ff53872",
+        "name": "",
+        "group": "cd92cf4fb56e215b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp. Ambiente",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#08dadd",
+            "#04e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8557a7a920ca0432",
+        "type": "mysql",
+        "z": "600565e67ff53872",
+        "mydb": "40247a432b69f6a8",
+        "name": "",
+        "x": 990,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a6d2a1732b0d479",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "IR",
+        "func": "var query = \"INSERT INTO `IR` (`id`, `fecha`, `valor`) VALUES (NULL, CURRENT_TIMESTAMP, '\"+msg.payload+\"');\";\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 500,
+        "wires": [
+            [
+                "8557a7a920ca0432"
+            ]
+        ]
+    },
+    {
+        "id": "6e53a280219439ee",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "ambiente",
+        "func": "var query = \"INSERT INTO `sensorAmb` (`id`, `fecha`, `valor`) VALUES (NULL, CURRENT_TIMESTAMP, '\"+msg.payload+\"');\";\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 20,
+        "wires": [
+            [
+                "8557a7a920ca0432"
+            ]
+        ]
+    },
+    {
+        "id": "d3b5b3ad84939885",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "cuerpo",
+        "func": "var query = \"INSERT INTO `sensorCorp` (`id`, `fecha`, `valor`) VALUES (NULL, CURRENT_TIMESTAMP, '\"+msg.payload+\"');\";\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "8557a7a920ca0432"
+            ]
+        ]
+    },
+    {
+        "id": "693a15434d2cbade",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "frecuencia",
+        "func": "var query = \"INSERT INTO `sensorFrecCard` (`id`, `fecha`, `valor`) VALUES (NULL, CURRENT_TIMESTAMP, '\"+msg.payload+\"');\";\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "8557a7a920ca0432"
+            ]
+        ]
+    },
+    {
+        "id": "603723bce4966af9",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "Oxigeno",
+        "func": "var query = \"INSERT INTO `sensorOxi` (`id`, `fecha`, `valor`) VALUES (NULL, CURRENT_TIMESTAMP, '\"+msg.payload+\"');\";\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "8557a7a920ca0432"
+            ]
+        ]
+    },
+    {
+        "id": "2fb939beb1b5cea7",
+        "type": "mqtt in",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/oxigeno/ir",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "363ccd2bc443744a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "5a6d2a1732b0d479",
+                "287dfa4f9a3ef623",
+                "d497e4d902640dda"
+            ]
+        ]
+    },
+    {
+        "id": "287dfa4f9a3ef623",
+        "type": "ui_chart",
+        "z": "600565e67ff53872",
+        "name": "",
+        "group": "3119e26b88fd524f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Señal Recibida de MAX30102",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "500",
+        "ymax": "110000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64dd6c4b11b3cd2a",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/temperatura/ambiente",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c4802072a6244bfb",
+        "x": 440,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f5a6be4f45955fc5",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/oxigeno/spo2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c4802072a6244bfb",
+        "x": 420,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cd594d720cec9a32",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/temperatura/cuerpo",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c4802072a6244bfb",
+        "x": 460,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "952ca9f1a4dd6e21",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/frecuencia_cardiaca/frecuencia",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c4802072a6244bfb",
+        "x": 510,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "99132d89a5aa3751",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "sensor/oxigeno/ir",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c4802072a6244bfb",
+        "x": 430,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d497e4d902640dda",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 1",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 580,
+        "wires": [
+            [
+                "99132d89a5aa3751"
+            ]
+        ]
+    },
+    {
+        "id": "c97662e96baca115",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 2",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "f5a6be4f45955fc5"
+            ]
+        ]
+    },
+    {
+        "id": "293c0758856f34bc",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 3",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "952ca9f1a4dd6e21"
+            ]
+        ]
+    },
+    {
+        "id": "3b9eeb90215729dc",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 4",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "cd594d720cec9a32"
+            ]
+        ]
+    },
+    {
+        "id": "80e317f20e7dd4d8",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 5",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "64dd6c4b11b3cd2a"
+            ]
+        ]
+    },
+    {
+        "id": "459dcb59162e88db",
+        "type": "mysql",
+        "z": "600565e67ff53872",
+        "mydb": "40247a432b69f6a8",
+        "name": "",
+        "x": 270,
+        "y": 680,
+        "wires": [
+            [
+                "8c8fc81c5755a257"
+            ]
+        ]
+    },
+    {
+        "id": "6414ce9275f960ba",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "funcion/count",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "363ccd2bc443744a",
+        "x": 590,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8c8fc81c5755a257",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 7",
+        "func": "msg.payload =  msg.payload[0].total_registros;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "6414ce9275f960ba"
+            ]
+        ]
+    },
+    {
+        "id": "d2171496fa38ac82",
+        "type": "mysql",
+        "z": "600565e67ff53872",
+        "mydb": "40247a432b69f6a8",
+        "name": "",
+        "x": 270,
+        "y": 720,
+        "wires": [
+            [
+                "3b0f88ccddc64018"
+            ]
+        ]
+    },
+    {
+        "id": "f2b4dcdc8f6df8f8",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "funcion/sum",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "363ccd2bc443744a",
+        "x": 590,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "3b0f88ccddc64018",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 10",
+        "func": "msg.payload =  msg.payload[0].suma_valores;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "f2b4dcdc8f6df8f8"
+            ]
+        ]
+    },
+    {
+        "id": "3b2c58e87d33cbdd",
+        "type": "mysql",
+        "z": "600565e67ff53872",
+        "mydb": "40247a432b69f6a8",
+        "name": "",
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "bb64ca3f89737eac"
+            ]
+        ]
+    },
+    {
+        "id": "fd8ad7e19f530fc8",
+        "type": "mqtt out",
+        "z": "600565e67ff53872",
+        "name": "",
+        "topic": "funcion/avg",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "363ccd2bc443744a",
+        "x": 590,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "bb64ca3f89737eac",
+        "type": "function",
+        "z": "600565e67ff53872",
+        "name": "function 11",
+        "func": "msg.payload =  msg.payload[0].promedio_temperatura;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 760,
+        "wires": [
+            [
+                "fd8ad7e19f530fc8"
+            ]
+        ]
+    },
+    {
+        "id": "325538d5e64eb9ad",
+        "type": "inject",
+        "z": "600565e67ff53872",
+        "name": "COUNT",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT COUNT(*) AS total_registros FROM sensorAmb;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "459dcb59162e88db"
+            ]
+        ]
+    },
+    {
+        "id": "d1bac6b6d55ff712",
+        "type": "inject",
+        "z": "600565e67ff53872",
+        "name": "SUM",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT SUM(valor) AS suma_valores FROM sensorOxi;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 720,
+        "wires": [
+            [
+                "d2171496fa38ac82"
+            ]
+        ]
+    },
+    {
+        "id": "a1775433c016975b",
+        "type": "inject",
+        "z": "600565e67ff53872",
+        "name": "AVG",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT AVG(valor) AS promedio_temperatura FROM sensorAmb;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "3b2c58e87d33cbdd"
+            ]
+        ]
+    },
+    {
+        "id": "363ccd2bc443744a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cd92cf4fb56e215b",
+        "type": "ui_group",
+        "name": "Temperaturas",
+        "tab": "0434c8fbd300ab40",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b833e06f96f0dc06",
+        "type": "ui_group",
+        "name": "Frecuencia cardiaca",
+        "tab": "0434c8fbd300ab40",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0c3372b9dc2f45c3",
+        "type": "ui_group",
+        "name": "Oxigenación",
+        "tab": "0434c8fbd300ab40",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "40247a432b69f6a8",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "proyectoIot",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "3119e26b88fd524f",
+        "type": "ui_group",
+        "name": "Señal Sensor MAX30102",
+        "tab": "0434c8fbd300ab40",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c4802072a6244bfb",
+        "type": "mqtt-broker",
+        "name": "app",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0434c8fbd300ab40",
+        "type": "ui_tab",
+        "name": "Sensores",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
