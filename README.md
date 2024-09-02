@@ -96,6 +96,7 @@ El objetivo en general de nuestro proyecto es crear un Wearable con el proposito
 [https://drive.google.com/drive/folders/1F5SofnbHtd9WaBUGriVulZW0koL4Zd6w](https://drive.google.com/file/d/1DfGaWIkpq-8bFCmUOfnM2PVuXYo9Nh7a/view?usp=sharing)
 
 ## Video con el patrocinador
+https://drive.google.com/file/d/1RpZLSwNEm3pmz2LmaiI-hLeFGBg71rWJ/view?usp=drivesdk 
 
 ## Cartda de agradecimiento
 ![Imagen de WhatsApp 2024-08-30 a las 22 27 38_42bc0332](https://github.com/user-attachments/assets/27957ea2-c14d-482b-9b9e-77acebb3ec0e)
